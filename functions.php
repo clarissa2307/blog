@@ -23,5 +23,7 @@ function obtener_post($post_por_pagina, $conexion){
     $sentencia->execute();
     return $sentencia->fetchAll();
 }
-
+function id_articulo($id){
+    return (int)limpiarDatos($id);
+}
 ?>
