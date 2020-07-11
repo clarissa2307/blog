@@ -3,16 +3,15 @@
     <div class="contenedor">
         <div class="post">
             <article>
-                <h2 class="titulo">Titulo del Articulo</h2>
-                <p class="fecha">1 de Enero de 2016</p>
+                <h2 class="titulo"><?php echo $post['titulo']; ?></h2>
+                <p class="fecha"><?php echo fecha($post['fecha']); ?></p>
                 <div class="thumb">
-                    <a href="#">
-                        <img src="<?php echo RUTA; ?>/imagenes/10.jpg" width="200" height="200" alt="">
-                    </a>
+                    
+                        <img src="<?php echo RUTA; ?>/imagenes/<?php echo $post['thumb']; ?>" width="200" height="200" 
+                        alt="<?php echo $post['titulo']; ?>">
+                    
                 </div>
-                <p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, incidunt modi.
-                 Exercitationem aperiam rerum vero pariatur error a tenetur officia, provident nemo
-                cum assumenda, aspernatur quod, ad dolores asperiores iure.</p>
+                <p class="extracto"><?php echo nl2br($post['texto']); ?></p>
             </article>
         </div>
         
